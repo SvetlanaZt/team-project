@@ -35,9 +35,10 @@
     padding-bottom: 40px;
     background-image: url(../images/contactsbg-1x.png),
       linear-gradient(180deg, $main-white-color 165px, $secondary-bg-color 0, $secondary-bg-color);
-    background-repeat: no-repeat, no-repeat;
-    background-position-y: 40%;
-    background-position-x: 0;
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    // background-size: contain;
+
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/contactsbg-2x.png),
         linear-gradient(180deg, $main-white-color 165px, $secondary-bg-color 0, $secondary-bg-color);
@@ -80,6 +81,7 @@
     margin-right: 20px;
     flex-basis: calc(100% / 3 - 20px);
     padding: 50px 32px;
+    margin-bottom: 0;
   }
   @media screen and (min-width: 1280px) {
     margin-right: 30px;
@@ -109,13 +111,7 @@
     padding-top: 32px;
   }
 }
-.contacts__wrap:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-.contacts__wrap:last-child {
-  margin-bottom: 0;
-}
+
 .contacts__subtitle-cafe {
   text-transform: uppercase;
   font-size: 12px;
@@ -126,6 +122,7 @@
   color: $main-white-color;
   letter-spacing: 0.04em;
   line-height: 1.83;
+  margin-right: 120px;
   @media screen and (min-width: 768px) {
     font-size: 16px;
     line-height: 1.87;
@@ -154,7 +151,7 @@
   font-size: 12px;
   color: $third-text-color;
   letter-spacing: 0.04em;
-  line-height: 1.2;
+  line-height: 1.5;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.43;
@@ -198,16 +195,26 @@
     line-height: 1.85;
   }
 }
+.contacts__contacts {
+  margin-top: 25px;
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 32px;
+  }
+}
 .contacts__tel-link,
 .contacts__mail-link {
   font-size: 12px;
   color: $third-text-color;
   letter-spacing: 0.04em;
   line-height: 1.5;
-  transition: $transition-duration, $timing-function;
+  transition: color $transition-duration $timing-function;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.85;
+    transition: color $transition-duration $timing-function;
   }
   @media screen and (min-width: 1280px) {
     font-size: 16px;
@@ -219,6 +226,7 @@
 .contacts__tel-link:focus,
 .contacts__mail-link:focus {
   color: $accent-color;
+  transition: color $transition-duration $timing-function;
 }
 .contacts__subtitle-foodtruck {
   text-transform: uppercase;
@@ -230,6 +238,7 @@
   color: $main-white-color;
   letter-spacing: 0.04em;
   line-height: 1.83;
+  margin-right: 70px;
   @media screen and (min-width: 768px) {
     font-size: 16px;
     line-height: 1.87;
@@ -250,6 +259,13 @@
     flex-direction: row;
   }
 }
+.contacts__btn {
+  margin-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 14px;
+  }
+}
 .contacts__location-btn {
   font-family: $main-font;
   font-weight: 700;
@@ -267,19 +283,23 @@
   width: 161.45px;
   height: 44px;
   padding: 10px 17px;
-  transition: color, $transition-duration, $timing-function, background-color, $transition-duration,
-    $timing-function;
-  margin-bottom: 10px;
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
+  // margin-bottom: 10px;
   @media screen and (min-width: 768px) {
-    margin-bottom: 0;
-    margin-right: 14px;
+    // margin-bottom: 0;
+    // margin-right: 14px;
     width: 190px;
+    transition: color $transition-duration $timing-function,
+      background-color $transition-duration $timing-function;
   }
 }
 .contacts__location-btn:focus,
 .contacts__location-btn:hover {
   color: $accent-color;
   background-color: $main-white-color;
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
 }
 
 .contacts__franchise-btn {
@@ -299,10 +319,12 @@
   width: 161.45px;
   height: 44px;
   padding: 10px 17px;
-  transition: color, $transition-duration, $timing-function, background-color, $transition-duration,
-    $timing-function;
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
   @media screen and (min-width: 768px) {
     width: 190px;
+    transition: color $transition-duration $timing-function,
+      background-color $transition-duration $timing-function;
   }
 }
 
@@ -310,4 +332,6 @@
 .contacts__franchise-btn:hover {
   color: $main-white-color;
   background-color: $accent-color;
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
 }
