@@ -1,0 +1,304 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 auto;
+}
+
+.products {
+  padding-top: 121px;
+  padding-bottom: 98px;
+  text-align: center;
+  @media screen and(min-width: 768px) {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+  @media screen and(min-width: 1280px) {
+    padding-top: 126px;
+    padding-bottom: 119px;
+  }
+}
+
+.products__label-title {
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: $secondary-font;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $secondary-accent-color;
+
+  @media screen and(min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @media screen and(min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.products__title {
+  margin-bottom: 144px;
+  font-family: $secondary-font;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-color;
+  @media screen and(min-width: 768px) {
+    margin-bottom: 150px;
+    font-size: 48px;
+    line-height: 1.15;
+  }
+  @media screen and(min-width: 1280px) {
+    margin-bottom: 259px;
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
+
+.products__list {
+  @media screen and(min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -10px;
+  }
+  @media screen and(min-width: 1280px) {
+    margin: -15px;
+    flex-wrap: nowrap;
+  }
+}
+
+.products__item {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 161px;
+  width: 280px;
+  height: 485px;
+  border-radius: 24px;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 146px;
+    }
+  }
+  @media screen and(min-width: 768px) {
+    margin: 10px;
+    width: 220px;
+  }
+  @media screen and(min-width: 1280px) {
+    margin: 15px;
+    width: 330px;
+    height: 525px;
+  }
+}
+
+.icecream {
+  background: $cream-card-bg-color;
+  &::before {
+    position: absolute;
+    content: url('/images/Products/ice-cream-mob@1x.png');
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media screen and(min-width: 768px) {
+      content: url('/images/Products/ice-cream-tablet@1x.png');
+    }
+    @media screen and(min-width: 1280px) {
+      content: url('/images/Products/ice-cream.png');
+      top: -50px;
+    }
+  }
+}
+
+.icecoffee {
+  background: $coffee-card-bg-color;
+  &::before {
+    position: absolute;
+    content: url('/images/Products/ice-coffee-mob@1x.png');
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media screen and(min-width: 768px) {
+      content: url('/images/Products/ice-coffee-tablet@1x.png');
+    }
+    @media screen and(min-width: 1280px) {
+      content: url('/images/Products/ice-coffee.png');
+      top: -50px;
+    }
+  }
+}
+
+.milkshakes {
+  background: $milkshake-card-bg-color;
+  &::before {
+    position: absolute;
+    content: url('/images/Products/milkshakes-mob@1x.png');
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media screen and(min-width: 768px) {
+      content: url('/images/Products/milkshakes-tablet@1x.png');
+    }
+    @media screen and(min-width: 1280px) {
+      content: url('/images/Products/milkshakes.png');
+      top: -50px;
+    }
+  }
+}
+
+.products__item-title {
+  margin-bottom: 66px;
+  font-family: $secondary-font;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $main-white-color;
+
+  @media screen and(min-width: 1280px) {
+    margin-bottom: 70px;
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.products__item-title::after {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: url('/images/Products/white-dots-divider.svg');
+  display: block;
+  @media screen and(min-width: 1280px) {
+    top: 43%;
+  }
+}
+
+.products__item-description {
+  // position: relative;
+  width: 200px;
+  margin: 0 auto;
+
+  @media screen and(min-width: 768px) {
+  }
+  @media screen and(min-width: 1280px) {
+    width: 100%;
+  }
+}
+
+.products__item-text {
+  width: 100%;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $main-white-color;
+
+  @media screen and(min-width: 768px) {
+    margin-bottom: 4px;
+    line-height: 1.76;
+    width: 198px;
+  }
+  @media screen and(min-width: 1280px) {
+    margin-bottom: 0;
+    width: 241px;
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}
+
+.products__bla-bla-bla {
+  width: 198px;
+  margin-bottom: 30px;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $main-white-color;
+  opacity: 1;
+
+  @media screen and(min-width: 768px) {
+    opacity: 0;
+    width: 198px;
+    letter-spacing: 0.01em;
+    margin-top: 10px;
+    transform: display;
+    transition-timing-function: $timing-function;
+    transition-duration: $transition-duration;
+    .reference:checked ~ & {
+      opacity: 1;
+    }
+  }
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.76;
+    opacity: 0;
+    .reference:checked ~ & {
+      opacity: 1;
+      width: 241px;
+    }
+  }
+}
+
+.reference {
+  display: none;
+}
+
+.products__button {
+  position: absolute;
+  bottom: 6%;
+  right: 42%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $main-white-color;
+  border: none;
+  transition-property: box-shadow;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(90deg, #d0ffd7 0%, #f8f7a9 49%, #f7dce6 80%, #f7f89b 100%);
+    animation: slidebg 5s linear infinite;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  @keyframes slidebg {
+    to {
+      background-position: 20vw;
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    bottom: 8%;
+    right: 40%;
+  }
+  @media screen and(min-width: 1280px) {
+    bottom: 9%;
+    right: 44%;
+  }
+}
+
+.products__icon {
+  position: absolute;
+  bottom: 36%;
+  right: 36%;
+  display: block;
+  width: 11px;
+  height: 11px;
+  fill: $accent-color;
+}
